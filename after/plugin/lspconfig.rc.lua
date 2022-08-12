@@ -10,6 +10,9 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
     vim.api.nvim_command [[augroup END]]
   end
+  if client.name == 'tsserver' then
+    client.resolved_capabilities.document_formatting = false
+  end
 end
 
 nvim_lsp.tsserver.setup {

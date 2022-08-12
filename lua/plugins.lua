@@ -28,4 +28,6 @@ packer.startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
   use 'akinsho/bufferline.nvim'
   use 'glepnir/lspsaga.nvim'
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'MunifTanjim/prettier.nvim'
 end)
