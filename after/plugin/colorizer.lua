@@ -4,10 +4,8 @@ if not status then
   return
 end
 
-print(colorizer)
-
 colorizer.setup(
-  {'*';},
+  { '*'; },
   {
     RGB = true;
     RRGGBB = true;
