@@ -1,6 +1,6 @@
-local status, packer = pcall(require, "packer")
+local status, packer = pcall(require, 'packer')
 if (not status) then
-  print("Packer is not installed")
+  print('Packer is not installed')
   return
 end
 
@@ -35,12 +35,13 @@ packer.startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'
   use 'EdenEast/nightfox.nvim'
   use {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
+    'nvim-neo-tree/neo-tree.nvim',
+    branch = 'v2.x',
     requires = {
-      "nvim-lua/plenary.nvim",
-      "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
+      'nvim-lua/plenary.nvim',
+      'kyazdani42/nvim-web-devicons', -- not strictly required, but recommended
+      'MunifTanjim/nui.nvim',
     }
   }
+  use 'tpope/vim-fugitive'
 end)

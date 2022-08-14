@@ -80,6 +80,7 @@
 - `EdenEast/nightfox.nvim`
 - `nvim-neo-tree/neo-tree.nvim`
 - `MunifTanjim/nui.nvim`
+- `tpope/vim-fugitive`
 
 ## Referenced
 
