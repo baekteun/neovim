@@ -6,12 +6,14 @@
 
 - Nerd Font
 - Neovim 0.7 +
+- packer.nvim
 
 ## 🛠️ Installation
 
 - **windows**
 
   ```
+  > mkdir ~\AppData\Local\nvim
   > cd ~\AppData\Local\nvim
   > git clone https://github.com/chanwoo00106/neovim.git ./
   > nvim +PackerSync
@@ -19,7 +21,10 @@
 
 - **mac**
   ```
-  몰라
+  > mkdir ~/.config/nvim
+  > cd ~/.config/nvim
+  > git clone https://github.com/chanwoo00106/neovim.git ./
+  > nvim +PackerSync
   ```
 
 ## 📦 Setup
