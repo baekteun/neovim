@@ -7,10 +7,6 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
-  use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
-  }
   use 'wbthomason/packer.nvim'
   use 'norcalli/nvim-colorizer.lua'
   use 'hoob3rt/lualine.nvim'
@@ -37,4 +33,5 @@ packer.startup(function(use)
   use 'lewis6991/gitsigns.nvim'
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
+  use "EdenEast/nightfox.nvim"
 end)
