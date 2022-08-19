@@ -44,5 +44,4 @@ packer.startup(function(use)
     }
   }
   use 'tpope/vim-fugitive'
-  use 'MunifTanjim/eslint.nvim'
 end)
