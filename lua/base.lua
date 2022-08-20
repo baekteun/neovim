@@ -29,6 +29,7 @@ vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }
 vim.api.nvim_command("set noswapfile")
+vim.api.nvim_command("set ffs=unix,dos")
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])

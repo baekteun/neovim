@@ -23,8 +23,8 @@ local on_attach = function(client, bufnr)
   --buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   --buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-
-   if client.name == 'tsserver' or client.name == 'diagnosticls' then
+  
+   if client.name == 'tsserver' or client.name == 'html' then
     client.resolved_capabilities.document_formatting = false
   end
 end
@@ -62,10 +62,20 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
-nvim_lsp.flow.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
+nvim_lsp.html.setup {
+  capabilities = capabilities,
+  filetypes = { "html", "ejs" },
+  init_options = {
+    provideFormatter = false
+  }
 }
+
+nvim_lsp.cssls.setup {
+  capabilities = capabilities,
+  filetypes = { "css" },
+}
+
+nvim_lsp.quick_lint_js.setup {}
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
