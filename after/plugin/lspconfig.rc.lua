@@ -24,7 +24,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   --buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
   
-   if client.name == 'tsserver' or client.name == 'html' then
+   if client.name == 'tsserver' then
     client.resolved_capabilities.document_formatting = false
   end
 end
@@ -74,8 +74,6 @@ nvim_lsp.cssls.setup {
   capabilities = capabilities,
   filetypes = { "css" },
 }
-
-nvim_lsp.quick_lint_js.setup {}
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
